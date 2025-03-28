@@ -38,14 +38,15 @@ Next in a linux terminal: python train.py, or run with python IDE like spyder.
 
 To train the model:   
 ```	
-	python train.py, or sbatch run_ml_gpu1_r55e.sh
-
+python train.py, or sbatch run_ml_gpu1_r55e.sh
 ```
 To test the model for each epoch:   
-```	python test_epo.py or sbatch run_test_epo_r55e.sh   
+```	
+python test_epo.py or sbatch run_test_epo_r55e.sh   
 ```
 To test the ensemble model:   
-```	python test_epo_ave.py or sbatch run_test_epo_ave_r55e.sh   
+```	
+python test_epo_ave.py or sbatch run_test_epo_ave_r55e.sh   
 ```
 
 Mainly used python scripts and steps to produce figures:  
