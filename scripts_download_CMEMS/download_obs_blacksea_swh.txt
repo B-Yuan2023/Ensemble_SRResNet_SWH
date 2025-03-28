@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Apr 17 11:46:42 2024
+input longitude, latitude and time range for download cmems15 data
+@author: g260218
+"""
+
+# steps to download insitu data
+# https://help.marine.copernicus.eu/en/articles/9133855-how-to-download-insitu-data-using-index-files
+# Step 1. Get the list of all index files
+# copernicusmarine get -i cmems_obs-ins_blk_phybgcwav_mynrt_na_irr --index-parts -nd
+# the -nd option stands for --no-directories and allows to not reproduce the hierarchy of the server.
+# Step 2. Filter the chosen index file
+# filter files of interest from index_latest.txt
+# save the output result in a text file (files_to_download.txt) before downloading:
+grep -E "*WAVE." index_history.txt| cut -d ',' -f 2 | rev | cut -d '/' -f 1,2 | rev > files_to_download.txt
+# Step 3. Download data
+copernicusmarine get --dataset-id cmems_obs-ins_blk_phybgcwav_mynrt_na_irr --dataset-part latest --file-list files_to_download.txt
+copernicusmarine get --dataset-id cmems_obs-ins_blk_phybgcwav_mynrt_na_irr --dataset-part history --file-list files_to_download.txt
+
+grep -E "*TG." index_history.txt| cut -d ',' -f 2 | rev | cut -d '/' -f 1,2 | rev > files_to_download_TG.txt
+copernicusmarine get --dataset-id cmems_obs-ins_blk_phybgcwav_mynrt_na_irr --dataset-part history --file-list files_to_download_TG.txt
+
+grep -E "*SPOT." index_history.txt| cut -d ',' -f 2 | rev | cut -d '/' -f 1,2 | rev > files_to_download_spot.txt
+copernicusmarine get --dataset-id cmems_obs-ins_blk_phybgcwav_mynrt_na_irr --dataset-part history --file-list files_to_download_spot.txt
+
+station 17390

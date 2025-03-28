@@ -1,0 +1,71 @@
+
+=====================================================================
+ECMWF cds download: 
+
+June 18, 2024 
+
+Download ERA5 data. 
+downscaling from ERA5 to cmems wave in Black Sea, scale of 20
+/work/gg0028/g260218/GB_output_interp/wave_cmems_blacksea/srmod_wt_sf_aux2_v
+par55e
+
+conda create -n cds
+conda install python
+pip install cdsapi
+conda install spyder-kernel
+
+create the following file with content for login
+/home/g/g260218/.cdsapirc 
+url: https://cds.climate.copernicus.eu/api/v2
+key: {uid}:{api-key}
+find uid & api-key from the cds account 
+
+=====================================================================
+September 26, 2024
+Step 1: register
+ECMWF updated to cds-beta
+
+Step 2:
+pip install --upgrade cdsapi
+
+Step 3:
+copy 
+  url: https://cds-beta.climate.copernicus.eu/api
+  key: new_key
+to /home/g/g260218/.cdsapirc
+
+step 4:
+go to datapage
+https://cds-beta.climate.copernicus.eu/datasets/reanalysis-era5-land?tab=download
+accept Licence to use Copernicus Products near bottom
+API request can be found 
+
+change 'format' to 'data_format'. 
+
+https://cds-beta.climate.copernicus.eu/how-to-api
+
+Ok, it seems that the format of the newly downloaded data
+does not match with that from previous download....
+And it takes much longer time for downloading. 
+
+This also results in errors when loading the data...
+variable: 'time' to 'valid_time'
+this differ from the original time format
+
+=====================================================================
+October 1, 2024
+
+url modified: 
+url: https://cds.climate.copernicus.eu/api
+key: new_key
+
+use 'data_format': 'netcdf_legacy' could give original data format, 
+not sure how long this will be supported. 
+=====================================================================
+
+
+
+
+
+
+

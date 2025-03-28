@@ -1,0 +1,106 @@
+
+=====================================================================
+Oct 10, 2023
+
+To download amm15 on levante: 
+First install packages needed for download using motuclient for amm15.
+Only use the specified motuclient version, newest version didnot work. 
+
+in console window:
+bash
+conda activate myenv
+pip install getpass
+pip install motuclient==1.8.4
+
+=====================================================================
+Mar 19, 2024
+
+install copernicus-marine-toolbox: 
+https://help.marine.copernicus.eu/en/articles/7970514-copernicus-marine-toolbox-installation
+
+save file copernicusmarine_env.yml that contains
+name: cmt_1.0
+channels:
+  - conda-forge
+dependencies:
+  - pip
+  - pip:
+    - copernicusmarine>=1.0<=2.0
+  - python>=3.9,<3.12
+  
+conda env create -f copernicusmarine_env.yml
+conda activate cmt_1.0
+conda install spyder-kernels=2.4
+
+stange: after install spyder-kernels, copernicusmarine dispear
+conda install conda-forge::copernicusmarine --yes
+conda update --name copernicusmarine copernicusmarine --yes
+
+
+=====================================================================
+May 6, 2024
+
+Not: satellite data usually have resolutions of 1 day in time and 0.25-0.125 deg in space. 
+
+cmems_NWS15_GB_wave
+https://data.marine.copernicus.eu/product/NWSHELF_REANALYSIS_WAV_004_015/description
+Spatial extent: Atlantic: NW European ShelfAtlantic: NorthLat 46° to 62.74°Lon -16° to 13°
+Spatial resolution:0.0135° × 0.0303°
+Temporal extent:1 Jan 1980 to 31 Dec 2023
+Temporal resolution:Hourly
+Variables: 
+Sea surface primary swell wave from direction (SW1)Sea surface primary swell wave mean period (SW1)Sea surface primary swell wave significant height (SW1)Sea surface secondary swell wave from direction (SW2)Sea surface secondary swell wave mean period (SW2)Sea surface secondary swell wave significant height (SW2)Sea surface wave from direction (VMDR)Sea surface wave from direction at variance spectral density maximum (VMDR)Sea surface wave mean period from variance spectral density inverse frequency moment (MWT)Sea surface wave mean period from variance spectral density second frequency moment (MWT)Sea surface wave period at variance spectral density maximum (MWT)Sea surface wave significant height (SWH)Sea surface wave stokes drift x velocity (UV, VSDXY)Sea surface wave stokes drift y velocity (UV, VSDXY)Sea surface wind wave from direction (WW)Sea surface wind wave mean period (WW)Sea surface wind wave significant height (WW)
+
+
+Global Ocean Waves Reanalysis
+Product ID:GLOBAL_MULTIYEAR_WAV_001_032
+Source:Numerical models
+Spatial extent:Global OceanLat -89.8° to 89.8°Lon -180° to 179.8°
+Spatial resolution:0.2° × 0.2°
+Temporal extent:1 Jan 1993 to 30 Nov 2023
+Temporal resolution:HourlyMonthly
+Processing level:Level 4
+Variables:
+Sea floor depth below geoidSea surface primary swell wave from direction (SW1)Sea surface primary swell wave mean period (SW1)Sea surface primary swell wave significant height (SW1)Sea surface secondary swell wave from direction (SW2)Sea surface secondary swell wave mean period (SW2)Sea surface secondary swell wave significant height (SW2)Sea surface wave from direction (VMDR)Sea surface wave from direction at variance spectral density maximum (VMDR)Sea surface wave mean period from variance spectral density inverse frequency moment (MWT)Sea surface wave mean period from variance spectral density second frequency moment (MWT)Sea surface wave period at variance spectral density maximum (MWT)Sea surface wave significant height (SWH)Sea surface wave stokes drift x velocity (UV, VSDXY)Sea surface wave stokes drift y velocity (UV, VSDXY)Sea surface wind wave from direction (WW)Sea surface wind wave mean period (WW)Sea surface wind wave significant height (WW)
+
+
+Atlantic -Iberian Biscay Irish- Ocean Wave Reanalysis
+IBI_MULTIYEAR_WAV_005_006
+Models
+Multi-area0.027° × 0.027°
+2 Jan 1993 to 27 Dec 2021 hourly multi-yearly
+Velocitywave
+
+Black Sea Waves Reanalysis
+BLKSEA_MULTIYEAR_WAV_007_006
+Models
+Black Sea0.025° × 0.025°
+1 Jan 1950 to 1 Apr 2024 hourly multi-yearly
+Velocitywave
+
+cmems_globalwind_GB
+Global wind: 
+https://data.marine.copernicus.eu/product/WIND_GLO_PHY_L4_MY_012_006/description
+Full name
+Global Ocean Hourly Reprocessed Sea Surface Wind and Stress from Scatterometer and Model
+Product ID: WIND_GLO_PHY_L4_MY_012_006
+Source:Numerical modelsSatellite observations
+Spatial extent:Global OceanLat -89.94° to 89.94°Lon -179.94° to 179.94°
+Spatial resolution:0.125° × 0.125°
+Temporal extent:1 Aug 1999 to 22 Dec 2023
+Temporal resolution:Hourly
+Processing level:Level 4
+Variables: 
+Air density (WIND)Eastward wind (WIND)Northward wind (WIND)Stress curl (WIND)Stress divergence (WIND)Surface downward eastward stress (WIND)Surface downward northward stress (WIND)
+
+
+
+=====================================================================
+=====================================================================
+
+
+
+
+
+
+
