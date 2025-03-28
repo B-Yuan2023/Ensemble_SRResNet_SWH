@@ -97,7 +97,7 @@ cal_metrics_intp.py:
 	get interpolated hr and its 01,99 percentile and time average.  
 
 >[!NOTE]
-For comparison with conventional ml models, results from ml models should be saved, 'ml_mod_name' should match with 'mod_name'.  
+For comparison with conventional ml models, results from ml models should be saved, 'ml_mod_name' should match with 'mod_name'. Conventional ml models like mulivariate linear regression for spatial wave downscaling see [https://github.com/B-Yuan2023/MLR_SWH]. 
 
 8. compare_ml_2D_pnt.py: (plot)  
 	compare MLR with SRResNet, time series of 2d map and points.  
