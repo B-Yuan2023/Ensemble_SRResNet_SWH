@@ -125,6 +125,7 @@ plot_study_domain.py:
 scripts needed: funs_prepost.py, funs_sites.py
 
 =============================
+
 initial check of datasets:  
 statistic_hr.py:  
 	to obtain the index of hour/batch for the maximum var.  
@@ -132,6 +133,7 @@ plot_hist_train_test.py:
 	check data distribution, plot hisogram of the training and testing data.  
 
 =============================
+
 check network structure and referencing time:  
 check_nn_structure.py:  
 	check the neural network structure and no. of coefficients.  
@@ -139,6 +141,7 @@ test_time.py:
 	check the referencing time after training for a selected period.  
 
 =============================
+
 test_epo_user.py:  
 	plot 2d map of 01,99,mean for user epoch; plot 2d snapshot of time series;
 	save 01,99,mean for user epoch. 
