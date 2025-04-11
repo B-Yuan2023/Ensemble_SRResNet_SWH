@@ -76,7 +76,7 @@ par*.py: parameter file (located in the parent path of \scripts), including mode
 Comparison of metrics: (plot)  
 4. compare_ens_err_gb.py: (plot)  
 	compare ensemble SRResNet with original SRResNet global error.  
-	need to load saved metrics from steps 2&3.
+	need to load saved metrics from steps 2&3.  
 5. compare_ens_metrics.py: (plot)  
 	compare metrics between different experiments (e.g. scale factor) using ensemble model.  
 
