@@ -49,7 +49,7 @@ To test the ensemble model:
 python test_epo_ave.py or sbatch run_test_epo_ave_r55e.sh   
 ```
 ===========================================================
-## Mainly used python scripts and steps to produce figures:
+### Mainly used python scripts and steps to produce figures:
   
 Main scripts for training and testing:  
 1. train.py:   
@@ -71,7 +71,7 @@ funs_prepost.py: functions for pre- and post-processing.
 par*.py: parameter file (located in the parent path of \scripts), including model parameters and information of dataset (file dir, nc variable names etc.).  
 
 ===========================================================
-## Scripts used for plotting
+### Scripts used for plotting
 
 Comparison of metrics: (plot)  
 4. compare_ens_err_gb.py: (plot)  
@@ -84,7 +84,7 @@ Scripts needed:
 funs_prepost.py: functions for post-processing.  
 
 ===========================================================
-Comparison of 2D spatial pattern and time series at selected location in user defined period: (plot)  
+### Comparison of 2D spatial pattern and time series at selected location in user defined period: (plot)  
 
 6. test_epo_ave_tuse.py:  
 	testing for the user defined (short) period instead of whole test set.  
