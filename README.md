@@ -1,10 +1,10 @@
 # SRResNet_ens: introduction
 
 This repository is for downscaling physical fields using 
-ensemble super-resolution residual network (SRResNet). 
+ensemble super-resolution residual network (SRResNet).
 Here the model is applied to downscale significant wave height (SWH) 
 in the Black Sea using low-resolution data from ERA5 and high-resolution 
-data from CMEMS. 
+data from CMEMS. [https://doi.org/10.1016/j.oceaneng.2025.121100] 
 Both self-variable downscaling from low-resolutoin SWH and cross-variable 
 downscaling from low-resolution wind fields are applied. 
 
