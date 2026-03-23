@@ -6,7 +6,8 @@ Here the model is applied to downscale significant wave height (SWH)
 in the Black Sea using low-resolution data from ERA5 and high-resolution 
 data from CMEMS. [https://doi.org/10.1016/j.oceaneng.2025.121100] 
 Both self-variable downscaling from low-resolutoin SWH and cross-variable 
-downscaling from low-resolution wind fields are applied. Dataset is available from https://doi.org/10.5281/zenodo.19185373. 
+downscaling from low-resolution wind fields are applied. 
+Dataset is available from [https://doi.org/10.5281/zenodo.19185373]. 
 
 An example has been constructed using the minima dataset. 
 Directories *data_ERA5* and *data_CMEMS* contain examples of low and high resoltuion data. 
